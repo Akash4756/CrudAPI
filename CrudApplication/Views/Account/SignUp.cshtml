@@ -1,0 +1,99 @@
+﻿@{ 
+    Layout =null;
+}
+
+<html>
+<head>
+    <title></title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2 mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">SignUp here</h4>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupName">
+                                    <label>Name <span class="mandatory">*</span></label>
+                                    <input type="text" name="Name" id="txtName" class="form-control" />
+                                    <span id="errName"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupEmail">
+                                    <label>Email <span class="mandatory">*</span></label>
+                                    <input type="text" name="Email" id="txtEmail" class="form-control" />
+                                    <span id="errEmail"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupPassword">
+                                    <label>Password <span class="mandatory">*</span></label>
+                                    <input type="text" name="Password" id="txtPassword" class="form-control" />
+                                    <span id="errPassword"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupGender">
+                                    <label>Gender <span class="mandatory">*</span></label>
+                                    <select id="ddlGender" name="Gender" class="form-control">
+                                        <option value="-1">Select</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Other</option>
+                                    </select>
+                                    <span id="errGender"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupMobile">
+                                    <label>Mobile <span class="mandatory">*</span></label>
+                                    <input type="text" name="Mobile" id="txtMobile" class="form-control" />
+                                    <span id="errMobile"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupAddress">
+                                    <label>Address <span class="mandatory">*</span></label>
+                                    <textarea name="Address" id="txtAddress" class="form-control"></textarea>
+                                    <span id="errAddress"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" id="formGroupIsActive">
+                                    <label>IsActive: <span class="mandatory">*</span></label>
+                                    <select id="ddlIsActive" name="IsActive" class="form-control">
+                                        <option value="-1">Select</option>
+                                        <option value="1">Active</option>
+                                        <option value="0">InActive</option>
+                                    </select>
+                                    <span id="errIs_Active"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group" id="formGroupSubmit">
+                                    <button type="button" class="btn btn-success" id="btnSignUp">SignUp</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label></label>
+                                    <a asp-action="Login" asp-controller="Account">Already have account Login here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/SignUp.js"></script>
+</body>
+</html>
